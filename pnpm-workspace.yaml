@@ -1,0 +1,4 @@
+ignoredBuiltDependencies:
+  - sqlite3
+onlyBuiltDependencies:
+  - '@nestjs/core'
