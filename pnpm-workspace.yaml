@@ -1,4 +1,5 @@
-ignoredBuiltDependencies:
-  - sqlite3
 onlyBuiltDependencies:
   - '@nestjs/core'
+  - '@scarf/scarf'
+  - '@swc/core'
+  - sqlite3

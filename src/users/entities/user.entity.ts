@@ -2,15 +2,15 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class User {
-  @PrimaryGeneratedColumn('increment')
-  id: number;
+	@PrimaryGeneratedColumn('increment')
+	id: number;
 
-  @Column()
-  name: string;
+	@Column()
+	name: string;
 
-  @Column()
-  email: string;
+	@Column()
+	email: string;
 
-  @Column()
-  passowrd: string;
+	@Column()
+	password: string;
 }

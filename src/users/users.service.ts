@@ -7,28 +7,28 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class UsersService {
-  constructor(
-    @InjectRepository(User)
-    private userRepository: Repository<User>,
-  ) {}
+	constructor(
+		@InjectRepository(User)
+		private userRepository: Repository<User>,
+	) {}
 
-  create(createUserInput: CreateUserInput) {
-    return this.userRepository.save(createUserInput);
-  }
+	create(createUserInput: CreateUserInput) {
+		return this.userRepository.save(createUserInput);
+	}
 
-  findAll() {
-    return this.userRepository.find();
-  }
+	findAll() {
+		return this.userRepository.find();
+	}
 
-  findOne(id: number) {
-    return this.userRepository.findOneBy({ id: id });
-  }
+	findOne(id: number) {
+		return this.userRepository.findOneBy({ id: id });
+	}
 
-  update(id: number, updateUserInput: UpdateUserInput) {
-    return this.userRepository.update(id, updateUserInput);
-  }
+	async update(id: number, updateUserInput: UpdateUserInput) {
+		return await this.userRepository.update(id, updateUserInput);
+	}
 
-  remove(id: number) {
-    return this.userRepository.delete(id);
-  }
+	async remove(id: number) {
+		return await this.userRepository.delete(id);
+	}
 }

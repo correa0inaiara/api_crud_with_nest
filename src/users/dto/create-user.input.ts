@@ -1,20 +1,26 @@
-import { Exclude, Transform } from 'class-transformer';
+import { ApiProperty } from '@nestjs/swagger';
+import { Transform } from 'class-transformer';
 import { IsEmail, IsNotEmpty, Length, MinLength } from 'class-validator';
 
 export class CreateUserInput {
-  @IsNotEmpty()
-  @Length(3, 10)
-  @Transform(({ value }) => value.toLowerCase())
-  readonly name: string;
+	id: number;
 
-  @IsNotEmpty()
-  @IsEmail()
-  readonly email: string;
+	@IsNotEmpty()
+	@Length(3, 50)
+	@Transform(({ value }) => String(value).toLowerCase())
+	@ApiProperty({ description: 'Nome do usuário', minLength: 3, maxLength: 10 })
+	readonly name: string;
 
-  @IsNotEmpty()
-  @MinLength(8)
-  readonly password: string;
+	@IsNotEmpty()
+	@IsEmail()
+	@ApiProperty({ description: 'Endereço de e-mail válido' })
+	readonly email: string;
 
-  @Exclude()
-  id: number;
+	@IsNotEmpty()
+	@MinLength(8)
+	@ApiProperty({ description: 'Senha do usuário, mínimo de 8 caracteres' })
+	readonly password: string;
+
+	// @Exclude()
+	// id: number;
 }
