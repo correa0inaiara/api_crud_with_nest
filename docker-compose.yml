@@ -1,0 +1,12 @@
+services:
+  backend:
+    image: ncorrea001/nest_api_crud
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - ip6net
+      
+networks:
+  ip6net:
+    enable_ipv6: true

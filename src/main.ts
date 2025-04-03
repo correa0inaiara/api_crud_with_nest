@@ -19,6 +19,8 @@ async function bootstrap() {
 	app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 	app.useGlobalPipes(new ValidationPipe({ transform: true }));
 	await app.listen(process.env.PORT ?? 3000);
+	const url = await app.getUrl();
+	console.log('Listening at: ', url);
 }
 bootstrap()
 	.then((res) => console.log('result', res))
