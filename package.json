@@ -1,6 +1,6 @@
 {
   "name": "nest-api-crud",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Aplicação criada para demonstrar como criar uma API CRUD com o node-express framework NestJS.",
   "author": "Naiara Correa",
   "private": true,

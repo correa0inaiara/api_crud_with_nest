@@ -3,7 +3,7 @@ FROM node:22.14.0-alpine
 
 # Identificação com nome e versão e descrição da imagem
 LABEL title="NEST API CRUD"
-LABEL version="1.0.2"
+LABEL version="1.0.3"
 LABEL description="Aplicação criada para demonstrar como criar uma API CRUD com o node-express framework NestJS."
 
 # Crie o diretório de trabalho dentro do contêiner
@@ -15,21 +15,11 @@ COPY . .
 # Copie o arquivo de configuração .env.prod para o diretório de trabalho
 COPY ./.env.prod ./.env
 
-# Instala o instalador wget na imagem
-# RUN apt-get install -y wget
-
-# Instala o PNPM
-# RUN wget -O- https://get.pnpm.io/install.sh | ENV="$HOME/.shrc" SHELL="$(which sh)" sh -
-
+# Instala o Corepack para instalar e habilitar o PNPM
 RUN npm install --global corepack@latest
-
 RUN corepack install --global pnpm@10.7.1
-
 RUN corepack use pnpm@10.7.1
-
 RUN corepack enable pnpm
-
-# RUN curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=10.7.1 sh -
 
 # Instale as dependências
 RUN pnpm install

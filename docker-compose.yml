@@ -1,12 +1,19 @@
+name: nest_api_crud
+
 services:
   backend:
     image: ncorrea001/nest_api_crud
+    container_name: nest_api_crud
     build:
       context: .
       dockerfile: Dockerfile
     networks:
       - ip6net
-      
+    ports:
+      - 3000:3000
+    volumes:
+      - .db/database:/etc/data
+
 networks:
   ip6net:
     enable_ipv6: true
