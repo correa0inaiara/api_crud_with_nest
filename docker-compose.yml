@@ -7,13 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    networks:
-      - ip6net
     ports:
       - 3000:3000
     volumes:
       - .db/database:/etc/data
-
-networks:
-  ip6net:
-    enable_ipv6: true

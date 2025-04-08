@@ -23,5 +23,5 @@ async function bootstrap() {
 	console.log('Listening at: ', url);
 }
 bootstrap()
-	.then((res) => console.log('result', res))
-	.catch((err) => console.log('error: ', err));
+	.then()
+	.catch((err) => console.log('And error occured: ', err));

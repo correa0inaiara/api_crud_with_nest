@@ -3,7 +3,7 @@ FROM node:22.14.0-alpine
 
 # Identificação com nome e versão e descrição da imagem
 LABEL title="NEST API CRUD"
-LABEL version="1.0.3"
+LABEL version="1.0.4"
 LABEL description="Aplicação criada para demonstrar como criar uma API CRUD com o node-express framework NestJS."
 
 # Crie o diretório de trabalho dentro do contêiner

@@ -1,171 +1,205 @@
 #1 [internal] load build definition from Dockerfile
-#1 sha256:4012db8a4763229720cffd9c09bec74322fcea49389542ef18630620b309bd59
-#1 transferring dockerfile: 1.26kB done
+#1 sha256:fd8d6e14234e0b82094bcd3c84f079bfc354c2bbdee5d60b8ad0f4a9f88574cf
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 sha256:fd8d6e14234e0b82094bcd3c84f079bfc354c2bbdee5d60b8ad0f4a9f88574cf
+#1 transferring dockerfile: 1.05kB done
 #1 DONE 0.0s
 
 #2 [internal] load metadata for docker.io/library/node:22.14.0-alpine
 #2 sha256:7c870dd41dceb48207e10b07aa1e8a1d98c4e343081939ba3abc24592f91351f
-#2 DONE 0.0s
+#2 ...
 
-#3 [internal] load .dockerignore
-#3 sha256:1f17026ee00ea1d8cd4b477bdf140d232c452450c3421523250ab3d0b4a71165
-#3 transferring context: 58B done
+#3 [auth] library/node:pull token for registry-1.docker.io
+#3 sha256:d7045095a8349d81cf4667ba4b3562f28695a2662401d2fedc155f6e11cb3551
 #3 DONE 0.0s
 
-#14 [ 1/10] FROM docker.io/library/node:22.14.0-alpine
-#14 sha256:1749362b559c18ba3b586551851d249e1fd5765b7490f8fedcd1df32ee7f1c0a
-#14 DONE 0.0s
+#2 [internal] load metadata for docker.io/library/node:22.14.0-alpine
+#2 sha256:7c870dd41dceb48207e10b07aa1e8a1d98c4e343081939ba3abc24592f91351f
+#2 DONE 3.7s
 
-#13 [ 2/10] WORKDIR /usr/src/api
-#13 sha256:9574c07140661f16050bf91efa59d761bbc1f7504de14cc23fc53f509ba33427
-#13 CACHED
+#4 [internal] load .dockerignore
+#4 sha256:649511e5bb1060571065085957a69103d887974e46e2c0daeee9084924eb5f1d
+#4 transferring context:
+#4 transferring context: 58B done
+#4 DONE 0.1s
 
-#12 [internal] load build context
-#12 sha256:655171a6397f27b249a8f0507cf9a19ecea4ae54c42f295686e02cae8b00b058
-#12 transferring context: 5.60kB done
-#12 DONE 0.0s
+#13 [internal] load build context
+#13 sha256:cb7eef46231446efb022c1e43cf5d5e288ee3ddd7b2ae4b75dadb478dbeca90a
+#13 DONE 0.0s
 
-#11 [ 3/10] COPY . .
-#11 sha256:a45ad7482a70d3329775dc2b1e708e6e6b87138a0240b9257e434be03ec594aa
-#11 DONE 0.0s
+#15 [ 1/10] FROM docker.io/library/node:22.14.0-alpine@sha256:9bef0ef1e268f60627da9ba7d7605e8831d5b56ad07487d24d1aa386336d1944
+#15 sha256:3e8f89f7f91c7ca8d1d8b037c648a942bac96f89f22119279e964f5a22ce6e24
+#15 resolve docker.io/library/node:22.14.0-alpine@sha256:9bef0ef1e268f60627da9ba7d7605e8831d5b56ad07487d24d1aa386336d1944
+#15 resolve docker.io/library/node:22.14.0-alpine@sha256:9bef0ef1e268f60627da9ba7d7605e8831d5b56ad07487d24d1aa386336d1944 0.1s done
+#15 DONE 0.1s
 
-#10 [ 4/10] COPY ./.env.prod ./.env
-#10 sha256:d34cd09ed837f0a9f88f3510eb61db65c1e393a3e48c1778b12212f7c1827c40
-#10 DONE 0.0s
+#14 [ 2/10] WORKDIR /usr/src/api
+#14 sha256:36508bbe95c75d50440c3fc718938551e66eba86089f02015c067d52759a599a
+#14 CACHED
 
-#9 [ 5/10] RUN npm install --global corepack@latest
-#9 sha256:7dbe55e726f4fa314a0068bca52838306f3cf0d13feec6395c805c81c04a1764
-#9 1.942 
-#9 1.942 changed 1 package in 2s
-#9 1.945 npm notice
-#9 1.945 npm notice New major version of npm available! 10.9.2 -> 11.2.0
-#9 1.945 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.2.0
-#9 1.945 npm notice To update run: npm install -g npm@11.2.0
-#9 1.945 npm notice
-#9 DONE 2.0s
+#13 [internal] load build context
+#13 sha256:cb7eef46231446efb022c1e43cf5d5e288ee3ddd7b2ae4b75dadb478dbeca90a
+#13 transferring context: 669.60kB 0.2s done
+#13 DONE 0.4s
 
-#8 [ 6/10] RUN corepack install --global pnpm@10.7.1
-#8 sha256:d39c6510e94c14f7a800b080dde5e4166ec7985262a5ea58aee241f20a85fcf6
-#8 0.479 Installing pnpm@10.7.1...
-#8 DONE 2.5s
+#12 [ 3/10] COPY . .
+#12 sha256:63fc34e6c061f90584e2a296ac13a1199cd2a1b4b931f4fd5e9a6ed15eb644a7
+#12 DONE 0.2s
 
-#7 [ 7/10] RUN corepack use pnpm@10.7.1
-#7 sha256:070e3c5d88a89395ddff70ba15cfdf4dbf044a0f638b362a67c21762522b5ea0
-#7 0.530 Installing pnpm@10.7.1 in the project...
-#7 0.541 
-#7 1.501 Lockfile is up to date, resolution step is skipped
-#7 1.644 Progress: resolved 1, reused 0, downloaded 0, added 0
-#7 1.845 Packages: +875
-#7 1.845 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#7 2.648 Progress: resolved 875, reused 0, downloaded 5, added 0
-#7 3.714 Progress: resolved 875, reused 0, downloaded 35, added 17
-#7 4.715 Progress: resolved 875, reused 0, downloaded 145, added 143
-#7 5.717 Progress: resolved 875, reused 0, downloaded 213, added 209
-#7 6.720 Progress: resolved 875, reused 0, downloaded 297, added 296
-#7 7.744 Progress: resolved 875, reused 0, downloaded 351, added 351
-#7 8.747 Progress: resolved 875, reused 0, downloaded 403, added 403
-#7 9.752 Progress: resolved 875, reused 0, downloaded 448, added 449
-#7 10.75 Progress: resolved 875, reused 0, downloaded 494, added 495
-#7 11.75 Progress: resolved 875, reused 0, downloaded 552, added 552
-#7 12.76 Progress: resolved 875, reused 0, downloaded 608, added 608
-#7 13.76 Progress: resolved 875, reused 0, downloaded 661, added 662
-#7 14.76 Progress: resolved 875, reused 0, downloaded 737, added 737
-#7 15.76 Progress: resolved 875, reused 0, downloaded 819, added 820
-#7 16.76 Progress: resolved 875, reused 0, downloaded 865, added 866
-#7 17.76 Progress: resolved 875, reused 0, downloaded 872, added 873
-#7 18.76 Progress: resolved 875, reused 0, downloaded 873, added 874
-#7 20.57 Progress: resolved 875, reused 0, downloaded 874, added 874
-#7 20.57 Progress: resolved 875, reused 0, downloaded 874, added 875, done
-#7 21.27 .../node_modules/@swc/core postinstall$ node postinstall.js
-#7 21.27 .../node_modules/@scarf/scarf postinstall$ node ./report.js
-#7 21.29 .../node_modules/@nestjs/core postinstall$ opencollective || exit 0
-#7 21.29 .../sqlite3@5.1.7/node_modules/sqlite3 install$ prebuild-install -r napi || node-gyp rebuild
-#7 21.38 .../node_modules/@swc/core postinstall: Done
-#7 21.84 .../node_modules/@nestjs/core postinstall:                            Thanks for installing nest 
-#7 21.85 .../node_modules/@nestjs/core postinstall:                  Please consider donating to our open collective
-#7 21.85 .../node_modules/@nestjs/core postinstall:                         to help us maintain this package.
-#7 21.86 .../node_modules/@nestjs/core postinstall:                                          
-#7 21.86 .../node_modules/@nestjs/core postinstall:                             Number of contributors: 0
-#7 21.86 .../node_modules/@nestjs/core postinstall:                              Number of backers: 1103
-#7 21.88 .../node_modules/@nestjs/core postinstall:                              Annual budget: $135,076
-#7 21.88 .../node_modules/@nestjs/core postinstall:                              Current balance: $6,947
-#7 21.89 .../node_modules/@nestjs/core postinstall:                                          
-#7 21.89 .../node_modules/@nestjs/core postinstall:              Become a partner: https://opencollective.com/nest/donate
-#7 21.89 .../node_modules/@nestjs/core postinstall:                                          
-#7 21.97 .../node_modules/@nestjs/core postinstall: Done
-#7 23.31 .../sqlite3@5.1.7/node_modules/sqlite3 install: Done
-#7 24.39 .../node_modules/@scarf/scarf postinstall: Done
-#7 24.64 
-#7 24.64 dependencies:
-#7 24.64 + @nestjs/common 11.0.12
-#7 24.64 + @nestjs/config 4.0.2
-#7 24.64 + @nestjs/core 11.0.12
-#7 24.64 + @nestjs/graphql 13.0.4
-#7 24.64 + @nestjs/mapped-types 2.1.0
-#7 24.64 + @nestjs/platform-express 11.0.12
-#7 24.64 + @nestjs/swagger 11.1.0
-#7 24.64 + @nestjs/typeorm 11.0.0
-#7 24.64 + class-transformer 0.5.1
-#7 24.64 + class-validator 0.14.1
-#7 24.64 + reflect-metadata 0.2.2
-#7 24.64 + rxjs 7.8.2
-#7 24.64 + sqlite3 5.1.7
-#7 24.64 + typeorm 0.3.21
-#7 24.64 
-#7 24.64 devDependencies:
-#7 24.64 + @eslint/eslintrc 3.3.1
-#7 24.64 + @eslint/js 9.23.0
-#7 24.64 + @nestjs/cli 11.0.5
-#7 24.64 + @nestjs/schematics 11.0.2
-#7 24.64 + @nestjs/testing 11.0.12
-#7 24.64 + @swc/cli 0.6.0
-#7 24.64 + @swc/core 1.11.16
-#7 24.64 + @types/express 5.0.1
-#7 24.64 + @types/jest 29.5.14
-#7 24.64 + @types/node 22.13.17
-#7 24.64 + @types/supertest 6.0.3
-#7 24.64 + eslint 9.23.0
-#7 24.64 + eslint-config-prettier 10.1.1
-#7 24.64 + eslint-plugin-prettier 5.2.5
-#7 24.64 + globals 16.0.0
-#7 24.64 + jest 29.7.0
-#7 24.64 + prettier 3.5.3
-#7 24.64 + source-map-support 0.5.21
-#7 24.64 + supertest 7.1.0
-#7 24.64 + ts-jest 29.3.1
-#7 24.64 + ts-loader 9.5.2
-#7 24.64 + ts-node 10.9.2
-#7 24.64 + tsconfig-paths 4.2.0
-#7 24.64 + typescript 5.8.2
-#7 24.64 + typescript-eslint 8.29.0
-#7 24.64 
-#7 24.71 Done in 24.1s using pnpm v10.7.1
-#7 DONE 25.4s
+#11 [ 4/10] COPY ./.env.prod ./.env
+#11 sha256:16f9b9611ec987682f17be74c792d34ffdf550b6ffd27957d2ec85bb0329266d
+#11 DONE 0.2s
 
-#6 [ 8/10] RUN corepack enable pnpm
-#6 sha256:c0cd25b4c9548235363d7edd30f1cf5cba41946c4af6796dc171159befcfdf3b
-#6 DONE 0.5s
+#10 [ 5/10] RUN npm install --global corepack@latest
+#10 sha256:5a518ab8ffeaad365776a123003d5c75d09cf0221f8e86c47cea3bdc4432c75c
+#10 4.310 
+#10 4.310 changed 1 package in 3s
+#10 4.318 npm notice
+#10 4.318 npm notice New major version of npm available! 10.9.2 -> 11.3.0
+#10 4.318 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.3.0
+#10 4.318 npm notice To update run: npm install -g npm@11.3.0
+#10 4.318 npm notice
+#10 DONE 4.4s
 
-#5 [ 9/10] RUN pnpm install
-#5 sha256:68a1fbd33fb586e945aff02040ce3b135b308a5e05493791eaefee2987780e43
-#5 1.231 Lockfile is up to date, resolution step is skipped
-#5 1.502 Already up to date
-#5 2.505 
-#5 2.551 Done in 2s using pnpm v10.7.1
-#5 DONE 2.6s
+#9 [ 6/10] RUN corepack install --global pnpm@10.7.1
+#9 sha256:4f1f340d870b2017cb18354e35f8ae252f9eab1fd483a69287dbe7da3a9b3c7b
+#9 0.755 Installing pnpm@10.7.1...
+#9 DONE 3.8s
 
-#4 [10/10] RUN pnpm run build
-#4 sha256:6d2858bd71f73a861055bec77218b9b8218380ea23113da7064ceb28e97de08a
-#4 1.073 
-#4 1.073 > nest-api-crud@1.0.2 build /usr/src/api
-#4 1.073 > nest build
-#4 1.073 
-#4 DONE 6.5s
+#8 [ 7/10] RUN corepack use pnpm@10.7.1
+#8 sha256:217c0b80acfbd56145583a4931b5b4a65e5f156022604fa0e1b6c73e3cdfe232
+#8 0.635 Installing pnpm@10.7.1 in the project...
+#8 0.647 
+#8 1.952 Lockfile is up to date, resolution step is skipped
+#8 2.179 Progress: resolved 1, reused 0, downloaded 0, added 0
+#8 2.601 Packages: +875
+#8 2.601 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#8 3.215 Progress: resolved 875, reused 0, downloaded 0, added 0
+#8 4.222 Progress: resolved 875, reused 0, downloaded 1, added 0
+#8 4.415 
+#8 4.415    ╭──────────────────────────────────────────────╮
+#8 4.415    │                                              │
+#8 4.415    │      Update available! 10.7.1 → 10.8.0.      │
+#8 4.415    │     Changelog: https://pnpm.io/v/10.8.0      │
+#8 4.415    │   To update, run: corepack use pnpm@10.8.0   │
+#8 4.415    │                                              │
+#8 4.415    ╰──────────────────────────────────────────────╯
+#8 4.415 
+#8 5.225 Progress: resolved 875, reused 0, downloaded 16, added 1
+#8 6.251 Progress: resolved 875, reused 0, downloaded 55, added 15
+#8 7.253 Progress: resolved 875, reused 0, downloaded 154, added 153
+#8 8.253 Progress: resolved 875, reused 0, downloaded 193, added 182
+#8 9.254 Progress: resolved 875, reused 0, downloaded 277, added 266
+#8 10.25 Progress: resolved 875, reused 0, downloaded 333, added 332
+#8 11.26 Progress: resolved 875, reused 0, downloaded 387, added 383
+#8 12.26 Progress: resolved 875, reused 0, downloaded 433, added 434
+#8 13.26 Progress: resolved 875, reused 0, downloaded 469, added 470
+#8 14.27 Progress: resolved 875, reused 0, downloaded 491, added 490
+#8 15.28 Progress: resolved 875, reused 0, downloaded 547, added 545
+#8 16.28 Progress: resolved 875, reused 0, downloaded 608, added 609
+#8 17.30 Progress: resolved 875, reused 0, downloaded 660, added 661
+#8 18.28 Progress: resolved 875, reused 0, downloaded 735, added 736
+#8 19.29 Progress: resolved 875, reused 0, downloaded 820, added 820
+#8 20.29 Progress: resolved 875, reused 0, downloaded 870, added 871
+#8 21.29 Progress: resolved 875, reused 0, downloaded 873, added 874
+#8 23.14 Progress: resolved 875, reused 0, downloaded 874, added 874
+#8 23.14 Progress: resolved 875, reused 0, downloaded 874, added 875, done
+#8 23.86 .../node_modules/@swc/core postinstall$ node postinstall.js
+#8 23.87 .../node_modules/@scarf/scarf postinstall$ node ./report.js
+#8 23.90 .../node_modules/@nestjs/core postinstall$ opencollective || exit 0
+#8 23.91 .../sqlite3@5.1.7/node_modules/sqlite3 install$ prebuild-install -r napi || node-gyp rebuild
+#8 24.00 .../node_modules/@swc/core postinstall: Done
+#8 24.55 .../node_modules/@nestjs/core postinstall:                            Thanks for installing nest 
+#8 24.56 .../node_modules/@nestjs/core postinstall:                  Please consider donating to our open collective
+#8 24.56 .../node_modules/@nestjs/core postinstall:                         to help us maintain this package.
+#8 24.56 .../node_modules/@nestjs/core postinstall:                                          
+#8 24.56 .../node_modules/@nestjs/core postinstall:                             Number of contributors: 0
+#8 24.56 .../node_modules/@nestjs/core postinstall:                              Number of backers: 1107
+#8 24.59 .../node_modules/@nestjs/core postinstall:                              Annual budget: $140,719
+#8 24.60 .../node_modules/@nestjs/core postinstall:                              Current balance: $7,637
+#8 24.60 .../node_modules/@nestjs/core postinstall:                                          
+#8 24.60 .../node_modules/@nestjs/core postinstall:              Become a partner: https://opencollective.com/nest/donate
+#8 24.61 .../node_modules/@nestjs/core postinstall:                                          
+#8 24.83 .../node_modules/@nestjs/core postinstall: Done
+#8 25.95 .../sqlite3@5.1.7/node_modules/sqlite3 install: Done
+#8 26.99 .../node_modules/@scarf/scarf postinstall: Done
+#8 27.35 
+#8 27.35 dependencies:
+#8 27.35 + @nestjs/common 11.0.12
+#8 27.35 + @nestjs/config 4.0.2
+#8 27.35 + @nestjs/core 11.0.12
+#8 27.35 + @nestjs/graphql 13.0.4
+#8 27.35 + @nestjs/mapped-types 2.1.0
+#8 27.35 + @nestjs/platform-express 11.0.12
+#8 27.35 + @nestjs/swagger 11.1.0
+#8 27.35 + @nestjs/typeorm 11.0.0
+#8 27.35 + class-transformer 0.5.1
+#8 27.35 + class-validator 0.14.1
+#8 27.35 + reflect-metadata 0.2.2
+#8 27.35 + rxjs 7.8.2
+#8 27.35 + sqlite3 5.1.7
+#8 27.35 + typeorm 0.3.21
+#8 27.35 
+#8 27.35 devDependencies:
+#8 27.35 + @eslint/eslintrc 3.3.1
+#8 27.35 + @eslint/js 9.23.0
+#8 27.35 + @nestjs/cli 11.0.5
+#8 27.35 + @nestjs/schematics 11.0.2
+#8 27.35 + @nestjs/testing 11.0.12
+#8 27.35 + @swc/cli 0.6.0
+#8 27.35 + @swc/core 1.11.16
+#8 27.35 + @types/express 5.0.1
+#8 27.35 + @types/jest 29.5.14
+#8 27.35 + @types/node 22.13.17
+#8 27.35 + @types/supertest 6.0.3
+#8 27.35 + eslint 9.23.0
+#8 27.35 + eslint-config-prettier 10.1.1
+#8 27.35 + eslint-plugin-prettier 5.2.5
+#8 27.35 + globals 16.0.0
+#8 27.35 + jest 29.7.0
+#8 27.35 + prettier 3.5.3
+#8 27.35 + source-map-support 0.5.21
+#8 27.35 + supertest 7.1.0
+#8 27.35 + ts-jest 29.3.1
+#8 27.35 + ts-loader 9.5.2
+#8 27.35 + ts-node 10.9.2
+#8 27.35 + tsconfig-paths 4.2.0
+#8 27.35 + typescript 5.8.2
+#8 27.35 + typescript-eslint 8.29.0
+#8 27.35 
+#8 27.43 Done in 26.7s using pnpm v10.7.1
+#8 DONE 28.2s
 
-#15 exporting to image
-#15 sha256:d770da951907502f2cfc4533e3c9672caafcab7f1097eebc4b0bcc5608d69da4
-#15 exporting layers
-#15 exporting layers 9.6s done
-#15 writing image sha256:424d05c2ebee8e14412910789fceae8cd5ac758033aa1aca6bd65afa817d6b8d done
-#15 naming to docker.io/ncorrea001/nest_api_crud:latest done
-#15 DONE 9.7s
+#7 [ 8/10] RUN corepack enable pnpm
+#7 sha256:0028bbc9c7ed4c0de12423de6fce92eeccfefc20b32caa9b3691a2a86b72f046
+#7 DONE 0.9s
+
+#6 [ 9/10] RUN pnpm install
+#6 sha256:81c357b6ede47504bf62a126a0401b1ad8197741f43326480e29d1202723a4ec
+#6 1.467 Lockfile is up to date, resolution step is skipped
+#6 1.731 Already up to date
+#6 3.047 
+#6 3.100 Done in 2.5s using pnpm v10.7.1
+#6 DONE 3.2s
+
+#5 [10/10] RUN pnpm run build
+#5 sha256:54d7b70b99afbdd58aafaf19672d66f15524fa211f3db8de1581fb6343015de0
+#5 0.909 
+#5 0.909 > nest-api-crud@1.0.3 build /usr/src/api
+#5 0.909 > nest build
+#5 0.909 
+#5 DONE 7.7s
+
+#16 exporting to image
+#16 sha256:b277b881657473932c6317a689cfe1111f76425dde316558a7d93965b0fe9411
+#16 exporting layers
+#16 exporting layers 26.5s done
+#16 exporting manifest sha256:b3aee36913af0a9f78b3967a43db70b34ea1373f28c411190663bf089d8f150a 0.0s done
+#16 exporting config sha256:1a32dd78c2ae2e36f63c1d3c58022ff74c24109224556847d065200f7023bddf 0.0s done
+#16 naming to docker.io/ncorrea001/nest_api_crud:1.0.4
+#16 naming to docker.io/ncorrea001/nest_api_crud:1.0.4 done
+#16 unpacking to docker.io/ncorrea001/nest_api_crud:1.0.4
+#16 unpacking to docker.io/ncorrea001/nest_api_crud:1.0.4 22.9s done
+#16 DONE 49.4s

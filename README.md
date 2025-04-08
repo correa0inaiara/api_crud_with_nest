@@ -6,33 +6,43 @@ This project is an example of an API CRUD with Nest.
 
 ## Project setup
 
-In this project I decided to test the [Performant Node Package Manager or PNPM](https://pnpm.io/) which as the name suggests, is more performant then node's default package manager - NPM.
-
-With PNPM the node_modules folder reduced in size, considerably. It keeps a reference for all the packages installed in all the projects where you use PNPM in a folder inside the system's folder, not the project's root folder. This way it can reuse all the packages without having to download and install them again. If you want a different version of the same package, it's gonna download, install and the next time it's gonna be available to any other project.
-
-To install PNPM you can follow the installation process on [PNPM Instalation](https://pnpm.io/pt/installation) page.
+1. To run the project you will need to install [Docker](https://docs.docker.com/get-started/get-docker/).
+2. After installing docker, from a terminal or console, you need to download the image for this project, currently hosted on my Docker Hub account: [ncorrea001](https://hub.docker.com/repositories/ncorrea001). Run the following:
 
 ```bash
-$ pnpm install
-
-
-docker network create --ipv6 ip6net
-
-docker build -t ncorrea001/nest_api_crud --no-cache --progress=plain . 2>&1 | tee docker-build.log .
-
-docker run --network ip6net -p 3000:3000 ncorrea001/nest_api_crud
-
+docker pull ncorrea001/nest_api_crud:1.0.4
 ```
+The command above downloads the image from Docker Hub to your hard disk.
 
-## Compile and run the project
+3. Now you need to run the image:
 
 ```bash
-# development
-$ pnpm run start
-
-# watch mode
-$ pnpm run start:dev
-
-# production mode
-$ pnpm run start:prod
+docker run -p 3000:3000 ncorrea001/nest_api_crud:1.0.4
 ```
+The command above is gonna create a new container to run the image that you downloaded before, and is gonna define the port 3000 for the container to run.
+
+4. If you've followed the commands above you should already be able to see the logs from the server, like this:
+
+![alt text](docker-container-console.png)
+
+Notice the last line saying the server is listening on [http://[::1]:3000](http://[::1]:3000). If you type or click that address/link on a browser you will see as follows:
+
+![alt text](docker-container-browser.png)
+
+If you have a tool to develop and test APIs like Postman you will see the Rest API Methods:
+- Get all users /users
+- Get user by id /users/:id
+- Post new user /users
+- Patch existing user by id /users/:id
+- Delete existing user by id /users/:id
+
+![alt text](rest-api-postman.png)
+
+----------------------------------------
+
+That's it.
+
+The idea of this project was to learn how to develop the CRUD operations on a Nest application (new Node Framework) and then launch it from inside a docker container.
+
+In this project I also explored the new Node Package Manager, called [Performant Node Package Managment](https://pnpm.io), that as the name suggests is faster and more performatic then Node's default package manager NPM.
+
